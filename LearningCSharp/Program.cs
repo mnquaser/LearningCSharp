@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Text;
 
 namespace LearningCSharp
 {
@@ -6,8 +8,17 @@ namespace LearningCSharp
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            //program HelloWorld
+            Console.WriteLine("Hello World");
             Console.ReadLine();
+
+            //program Variables
+            int x = 32;
+            int y = x + 2;
+            Console.WriteLine(y);
+            Console.ReadLine();
+
+
         }
     }
 }
