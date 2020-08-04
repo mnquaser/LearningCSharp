@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace TryingOutCSharp
 {
@@ -8,10 +6,16 @@ namespace TryingOutCSharp
     {
         static void Main(string[] args)
         {
-          
-            Console.WriteLine("Hello World");
-            Console.ReadLine();
-
+            for (int value = 0; value < 10; value++)
+            {
+                if (value == 7)
+                {
+                    Console.WriteLine("Found 7");
+                    break;
+                }
+                else    
+                    Console.WriteLine("Current value {0}, 7 not found!", value);
+            }      
         }
     }
 }
