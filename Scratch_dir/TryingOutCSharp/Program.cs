@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Microsoft.VisualBasic;
+using System;
+using System.Linq;
 
 namespace TryingOutCSharp
 {
@@ -6,28 +8,115 @@ namespace TryingOutCSharp
     {
         static void Main(string[] args)
         {
-            //1
-            string[] books = new string[] { "Angels and Demons", "The  Da'Vinci Code,",
-                                                "The Lost Symbols", "Inferno", "Origins" };
+            /* WriteLine
+            Console.WriteLine("Hello World"); /*
 
-            for (int i = 0; i < books.Length; i++)
+            /* Write
+            Console.Write("Hello ");
+            Console.Write("World"); */
+
+            /* ReadLine
+            Console.WriteLine("What is your name?");
+            var name = Console.ReadLine();
+            Console.WriteLine("Welcome {0}.", name); */
+
+            /* if
+            String msg = "";
+            Console.Write("Choose a door 1 or 2 : ");
+            String userValue = Console.ReadLine();
+            if (userValue == "1")
             {
-                Console.WriteLine(books[i]);
+                msg = "You win";
             }
-            //2
+            else
+            {
+                msg = "You are dead";
+            }
+            Console.WriteLine(msg); */
+
+            /* if -shorthand
+            
+            Console.Write("Choose a door 1 or 2 : ");
+            String userValue = Console.ReadLine();
+            string msg = (userValue == "1") ? "You win" : "You lose";
+            Console.WriteLine(msg); 
+            */
+
+
+            /* for loop and break
+            for (int i = 0; i < 10; i++)
+            {
+                Console.WriteLine(i);
+                if (i == 7)
+                {
+                    Console.WriteLine("Breaking up");
+                    break;
+                }
+            }
+            */
+
+
+            /* foreach / for -shorthand , Enumerable.Range
+            foreach (int item in Enumerable.Range(0, 10))
+            {
+                Console.WriteLine(item);
+                if (item == 7)
+                {
+                    Console.WriteLine("Breaking up");
+                    break;
+                }
+            }
+            */
+
+
+            /* basic array
+            string[] books = new string[] {"Angles and Demons", "The da'Vinci code", "The lost symbol",
+                                            "Inferno", "Origins"};
+            int indexNum = 1;
             foreach (string book in books)
             {
-                Console.WriteLine("this is with 'foreach' : {0}", book);
+                Console.WriteLine("{0}. {1}", indexNum, book);
+                indexNum++;
             }
-            //3
-            string qoute = "Whatever happens, happens.";
-            char[] chQoute = qoute.ToCharArray();
-            Array.Reverse(chQoute);
-            Console.WriteLine(qoute);
-            foreach (char item in chQoute)
+            */
+
+            /* char array
+            String quote = "Whatever happens, happens";
+            char[] charArray = quote.ToCharArray();
+            Console.WriteLine(quote);
+            Array.Reverse(charArray);
+
+            foreach (char quoteChar in charArray)
             {
-                Console.Write(item);
+                Console.Write(quoteChar);
             }
+            */
+
+            // HelloWorld();
+            // Welcome("Rafef");
+            Console.WriteLine("Your name is {0}", Name());
+        }
+
+        /* defining a simple method 1
+        private static void HelloWorld()
+        {
+            Console.WriteLine("Hello World");
+        }
+        */
+
+
+        /* defining a simple method 2 
+        private static void Welcome(string name)
+        {
+            Console.WriteLine("Welcome {0}", name);
+        }
+        */
+
+        private static string Name()
+        {
+            Console.Write("Type your name : ");
+            string name = Console.ReadLine();
+            return name;
         }
     }
 }
